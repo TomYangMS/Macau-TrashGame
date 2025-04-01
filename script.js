@@ -15,7 +15,7 @@ const categories = [
         type: 'general',
         name: '一般垃圾',
         image: 'general.png',
-        items: ['general1.png', 'general2.png', 'general3.png', 'general4.png', 'general5.png']
+        items: ['general1.png', 'general2.png', 'general3.png', 'general4.png', 'general5.png', 'general6.png']
     },
     {
         type: 'electronic',
