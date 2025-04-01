@@ -1,9 +1,11 @@
+/* 全局樣式 */
 body {
     font-family: "Comic Sans MS", cursive;
-    background: #a8dadc;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     text-align: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .page {
@@ -12,6 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
 }
 
 .hidden {
@@ -19,18 +22,20 @@ body {
 }
 
 h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 3vw;
+    margin-bottom: 2vh;
 }
 
 button {
     background: #457b9d;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 1.5vh 3vw;
+    border-radius: 0.5vh;
     cursor: pointer;
     transition: transform 0.2s;
+    font-size: 2vw;
+    margin: 15px;
 }
 
 button:hover {
@@ -40,57 +45,113 @@ button:hover {
 .stats {
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    font-size: 1.2em;
+    width: 80vw;
+    margin: 2vh auto;
+    font-size: 2vw;
 }
 
 .game-area {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1000px;
-    margin: 20px auto;
+    width: 85vw; /* 進一步減小寬度 */
+    margin: 2vh auto;
+    padding-bottom: 30px;
 }
 
 .item-container {
-    width: 150px;
-    height: 200px;
+    width: 25vw;
+    height: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
-    border: 2px solid #e63946;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .item-container img {
-    max-width: 200px;
-    max-height: 300px;
+    max-width: 33vw;
+    max-height: 45vh;
     object-fit: contain;
 }
 
 .bins-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    width: 60%;
+    gap: 1.5vh;
+    width: 55vw; /* 進一步減小寬度 */
 }
 
 .bin {
-    background: #f1faee;
-    border: 3px solid #457b9d;
-    border-radius: 10px;
-    padding: 20px;
+    background: transparent;
+    border: none;
+    padding: 2vh;
     cursor: pointer;
     transition: transform 0.2s;
 }
 
 .bin img {
-    width: 100px;
-    height: 100px;
+    width: 13vw; /* 減小寬度 */
+    height: 13vw; /* 減小高度 */
     object-fit: contain;
+}
+
+/* 隐藏垃圾桶下方的文字 */
+.bin p {
+    display: none;
+}
+
+/* 排行榜表格样式 */
+#leaderboardTable {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#leaderboardTable th {
+    background-color: #2a9d8f; /* 修改表头背景色 */
+    color: white;
+    border: 1px solid #1a665e; /* 修改表头边框颜色 */
+    padding: 10px;
+}
+
+#leaderboardTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#leaderboardTable tr:nth-child(even) {
+    background-color: #e9c46a; /* 修改偶数行背景色 */
+}
+
+#leaderboardTable tr:nth-child(odd) {
+    background-color: #f4a261; /* 修改奇数行背景色 */
+}
+
+#leaderboardTable tr:hover {
+    background-color: #e76f51; /* 修改鼠标悬停时的背景色 */
+}
+
+/* 针对开始界面元素位置调整 */
+#startPage input {
+    margin-bottom: 20px;
+}
+
+#startPage button {
+    width: 20vw;
+}
+
+/* 为游戏界面添加背景图片，使用相对路径 */
+#gamePage {
+    background-image: url('images/background2.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* 为开始界面添加背景图片，使用相对路径 */
+#startPage {
+    background-image: url('images/background1.png');
+    background-size: cover;
+    background-position: center;
 }

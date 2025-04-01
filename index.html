@@ -5,36 +5,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 排行榜頁面 -->
+    <div id="leaderboardPage" class="page hidden">
+        <h1>排行榜</h1>
+        <table id="leaderboardTable">
+            <thead>
+                <tr>
+                    <th>排名</th>
+                    <th>玩家姓名</th>
+                    <th>得分</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboardList"></tbody>
+        </table>
+        <button id="backToStartBtn">返回開始頁面</button>
+    </div>
     <!-- 開始頁面 -->
     <div id="startPage" class="page">
         <h1>🗑️ 歡迎來到澳門廢棄物分類遊戲</h1>
+        <input type="text" id="playerName" placeholder="請輸入你的名字" value="user">
         <button id="startBtn">開始遊戲</button>
+        <button id="viewLeaderboardBtn">查看排行榜</button>
+        <!-- 新增：声音控制按钮 -->
+        <button id="soundToggleBtn">打开声音</button> 
     </div>
-
     <!-- 遊戲頁面 -->
     <div id="gamePage" class="page hidden">
         <h1>澳門廢棄物分類遊戲</h1>
-        
         <div class="controls">
             <button id="restartBtn">重新開始</button>
         </div>
-
         <div class="stats">
             <div>⏳ 時間：<span id="timer">30</span>秒</div>
             <div>⭐ 得分：<span id="score">0</span></div>
         </div>
-
         <div class="game-area">
             <!-- 垃廢棄物卡片區域 -->
             <div class="item-container" id="itemContainer">
                 <!-- 廢棄物卡片會動態生成 -->
             </div>
-
             <!-- 垃圾桶區域 -->
             <div class="bins-container" id="binsContainer"></div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
